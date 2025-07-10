@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #navbar{
+            background-color: cyan;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding : 1rem;
+        }
+        .navigation {
+            display: flex;
+            align-items: center;
+        }
+        .nav-list {
+            display: flex;
+        }
+        .navigation ul li {
+            list-style: none;
+            padding: 1rem;
+        }
+        .navigation ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        button{
+            padding: .5rem 1.5rem;
+            border-radius: .3rem;
+            border: 1px solid grey;
+            background-color: olivedrab;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div class="brand">
+            <h1>PUMA</h1>
+        </div>
+        <div class="navigation">
+            <ul class="nav-list">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+            <button>Register</button>
+        </div>
+    </div>
+</body>
+</html>
