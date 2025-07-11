@@ -1,67 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        #navbar{
-            background-color: cyan;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding : 1rem;
-        }
-        .navigation {
-            display: flex;
-            align-items: center;
-        }
-        .nav-list {
-            display: flex;
-        }
-        .navigation ul li {
-            list-style: none;
-            padding: 1rem;
-        }
-        .navigation ul li a{
-            text-decoration: none;
-            color: black;
-        }
-        button{
-            padding: .5rem 1.5rem;
-            border-radius: .3rem;
-            border: 1px solid grey;
-            background-color: olivedrab;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+          font-family: "Poppins", sans-serif;
 
+      }
+      body{
+        background-color: #dad7cd;
+      }
+      #navbar {
+        background-color: #588157;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+      .navigation {
+        display: flex;
+        align-items: center;
+      }
+      .nav-list {
+        display: flex;
+      }
+      .navigation ul li {
+        list-style: none;
+        padding: 1rem;
+      }
+      .navigation ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-weight: bold;
+      }
+      button {
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.3rem;
+        color: white;
+        border: 1px solid grey;
+        /* background-color: olivedrab; */
+        background: #344E41;
+background: linear-gradient(90deg, rgba(52, 78, 65, 1) 23%, rgba(56, 125, 91, 1) 100%);
+      }
+      /* ================================ */
+      /* ====================Hero section */
+      /* ================================ */
+      #hero-section {
+        background-color: #a3b18a;
+        padding: 3rem 4rem;
+        display: flex;
+        justify-content: space-between;
+
+        margin: 1rem 3rem;
+        border-radius: 2rem;
+        border: 2px solid grey;
+      }
+      .content-side {
+        width: 50%;
+        /* background-color: yellow; */
+      }
+      .graphic-side {
+        width: 50%;
+        /* background-color: violet; */
+        padding: 1rem;
+      }
+      .hero-img {
+        width: 300px;
+      }
+      .content-side h1 {
+        font-size: 60px;
+        margin: 2rem 0rem;
+      }
+      .lead {
+        font-size: x-large;
+        margin: 2rem 0rem;
+      }
+      .desc {
+        margin: 1rem 0rem;
+      }
+      .content-side button {
+        margin: 1rem 0rem;
+        padding: 1rem 3rem;
+        /* background-color: transparent; */
+        border: 1px solid peru;
+        color: white;
+        font-size: large;
+        background: #344E41;
+background: linear-gradient(90deg, rgba(52, 78, 65, 1) 23%, rgba(56, 125, 91, 1) 100%);
+        /* color: white; */
+      }
+
+      .graphic-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .brand-logo{
+        width: 100px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="navbar">
-        <div class="brand">
-            <h1>PUMA</h1>
-        </div>
-        <div class="navigation">
-            <ul class="nav-list">
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Blog</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
-            <button>Register</button>
-        </div>
+      <div class="brand">
+        <img src="assets/images/brand.png" alt="" class="brand-logo">
+      </div>
+      <div class="navigation">
+        <ul class="nav-list">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Blog</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+        <button>Register</button>
+      </div>
     </div>
-</body>
+    <div id="hero-section">
+      <!-- content side -->
+      <div class="content-side">
+        <h1>We Dress Sporty</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus, eos.
+        </p>
+        <p class="desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi ipsa
+          ratione magni nulla dicta laudantium quaerat illo explicabo eius
+          laboriosam esse numquam, similique perspiciatis consequatur iste
+          corrupti odio perferendis alias!
+        </p>
+        <button>Click Me</button>
+      </div>
+      <!-- graphic side -->
+      <div class="graphic-side">
+        <img class="hero-img" src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d45542c7f9c0552d0ea237_Growth.svg" alt="" />
+      </div>
+    </div>
+  </body>
 </html>
