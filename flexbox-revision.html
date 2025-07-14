@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .boxholder{
+            background-color: thistle;
+            padding: .5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            height: 100vh;
+
+        }
+        .box{
+            width: 100px ;
+            height: 100px;
+            background-color: coral;
+            margin: .5rem;
+        }
+        .bg{
+            background-color: red;
+            color: white;
+        }
+        .navbar{
+            background-color: thistle;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        .nav-list{
+            display: flex;
+        }
+        .navigation{
+            display: flex;
+        }
+        .nav-list li{
+            list-style: none;
+        }
+        .nav-list li a{
+            text-decoration: none;
+            color: black;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="boxholder">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+
+    <div class="navbar">
+        <div class="brand">
+             <h1>NDURE</h1>
+        </div>
+        <div class="navigation">
+
+            <ul class="nav-list">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Services</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+            <button>signup</button>
+            <button>login</button>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
