@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psedu Selector</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 1200px;
+            height: 700px;
+            border-radius: .5rem;
+            background-image: url(assets/images/football.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-position: 12px; */
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            font-size: xx-large;
+            color: white;
+            font-weight: bolder;
+            position: relative;
+            /* z-index: 10; */
+
+        }
+        .box::before{
+            content: "";
+            background-color: rgba(0, 0, 0, 0.666);
+            /* padding: 1rem; */
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .box-inner{
+            z-index: 100;
+        }
+        /* .box::after{
+            content: "after";
+        } */
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box-inner">
+                <h1>The Best Coders For Renting</h1>
+                <p>We have every type of coder in out catalogue , genius, dump , idiot</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
