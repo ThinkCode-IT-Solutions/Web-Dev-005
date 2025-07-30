@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid in HTML</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: #6f6f47;
+            padding: 1rem;
+
+            /* grid */
+            display: grid;
+            /* grid-template-columns: repeat(3, 300px); */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+
+        }
+        .box{
+            padding: 1rem;
+            background-color: maroon;
+            margin: 1rem;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-radius: .5rem;
+            box-shadow: .5rem .5rem 1rem  #343434 ;
+            
+        }
+        #box-1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        #box-2{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        #box-4{
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        #box-3{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #box-9{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box-1">BOX - 1</div>
+        <div class="box" id="box-2">BOX - 2</div>
+        <div class="box" id="box-3">BOX - 3</div>
+        <div class="box" id="box-4">BOX - 4</div>
+        <div class="box" id="box-5">BOX - 5</div>
+        <div class="box" id="box-6">BOX - 6</div>
+        <div class="box" id="box-7">BOX - 7</div>
+        <div class="box" id="box-8">BOX - 8</div>
+        <div class="box" id="box-9">BOX - 9</div>
+        <div class="box" id="box-10">BOX - 10</div>
+        <div class="box" id="box-11">BOX - 11</div>
+        <div class="box" id="box-12">BOX - 12</div>
+    </div>
+</body>
+</html>
