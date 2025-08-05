@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Bootstrap</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+    <!-- bootstrap js -->
+    <script src="bootstrap/bootstrap.min.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Naxora</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            
+           
+          </ul>
+          <form class="d-flex" role="search">
+            <!-- <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            /> -->
+            <button class="btn btn-warning " type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="hero-section" class="d-flex justify-content-center align-items-center flex-wrap bg-secondary container mt-4 p-5 rounded-3">
+        <div class="left side w-50">
+            <h1>The Future of AGI is here</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore unde iste veritatis ex harum aut nemo sunt alias consequuntur </p>
+            <div>
+                <button>click me </button>
+                <button>buy me</button>
+            </div>
+        </div>
+        <div class="right side w-50">
+            <img src="assets/images/hero-2.png" class="img-fluid" alt="" style="width: 600px;">
+        </div>
+    </div>
+  </body>
+</html>
