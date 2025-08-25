@@ -99,9 +99,32 @@ let cities = [
   "Cape Town",
   "Mexico City",
   "Singapore",
-  "Seoul"
+  "Seoul",
 ];
 
-for( let index = 0 ; index < cities.length ; index++){
-    console.log( index +1+ " : is my favourite " + cities[index]  )
-}
+/**
+ * controlling variable
+ * condition
+ * increment
+ */
+
+// for(let index = 0; index < myFavFood.length;index++){
+//   let element = myFavFood[index];
+//   console.log(element);
+// }
+
+let myFavFood = ["biryani", "palao", "pizza", "maggi", "beef"];
+
+let loop = 0; // outside of the loop
+// while(loop > myFavFood.length){
+//   console.log(myFavFood[loop] + " is tasty");
+
+//   loop++;
+// }
+
+
+do{
+  console.log(myFavFood[loop] + " is tasty");
+  loop++;
+}while (loop > myFavFood.length);
+
