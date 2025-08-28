@@ -10,6 +10,7 @@ console.log("Welcome to the Functions class");
  * functions are of two types in js
  *  - common js functions
  *  - arrow functions
+ * return statement in a function
  *
  */
 
@@ -57,12 +58,12 @@ function getTable(tableof) {
 }
 
 // wasif -> calculator
-let num1 = parseInt(prompt("Enter number 1"));
-let num2 = parseInt(prompt("Enter number 2"));
-let operation = prompt(
-  "Choose an operation \n[1] : Addition (+)\n[2] : Multiplication (*)\n[3] : Division (/)\n[4] : Subtraction (-)\n"
-);
-calculator(num1,num2,operation)
+// let num1 = parseInt(prompt("Enter number 1"));
+// let num2 = parseInt(prompt("Enter number 2"));
+// let operation = prompt(
+//   "Choose an operation \n[1] : Addition (+)\n[2] : Multiplication (*)\n[3] : Division (/)\n[4] : Subtraction (-)\n"
+// );
+// calculator(num1,num2,operation)
 
 function calculator(n1, n2, ops) {
   if (ops == 1) {
