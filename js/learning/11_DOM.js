@@ -43,8 +43,3 @@ while (index < buttons.length) {
 
 
 
-
-
-
-// event listeners
-let
