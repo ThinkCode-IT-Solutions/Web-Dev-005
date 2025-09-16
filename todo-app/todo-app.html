@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="todo-container">
+      <header>
+        <h1>My Tasks</h1>
+      </header>
+
+      <form class="todo-form">
+        <input type="text" placeholder="Add a new task..." class="todo-input" id="todo-input"/>
+        <button type="submit" >+</button>
+      </form>
+
+      <ul class="todo-list">
+        <li class="todo-item">
+          <div class="item-main">
+            <input type="checkbox" id="task1" checked />
+            <label for="task1">Design the new website mockup</label>
+          </div>
+          <div class="item-meta">
+            <span class="date">Sep 16, 2025</span>
+          </div>
+        </li>
+
+        <li class="todo-item">
+          <div class="item-main">
+            <input type="checkbox" id="task2" />
+            <label for="task2">Develop the front-end components</label>
+          </div>
+          <div class="item-meta">
+            <span class="date">Sep 18, 2025</span>
+          </div>
+        </li>
+
+        <li class="todo-item">
+          <div class="item-main">
+            <input type="checkbox" id="task3" />
+            <label for="task3">Schedule a team meeting for Friday</label>
+          </div>
+          <div class="item-meta">
+            <span class="date">Sep 19, 2025</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
