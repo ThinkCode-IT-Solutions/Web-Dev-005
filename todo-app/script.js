@@ -16,8 +16,29 @@ let submitForm = (e) => {
   };
 
   todoArray.push(todoObj);
+  console.log(todoArray);
   formInput.value = "";
- 
+
+  // show the notes
+  let notesContainer = document.querySelector(".todo-list");
+
+  // loop through the todo
+  let index = 0;
+  while (index < todoArray.length) {
+    let todoItem = todoArray[index];
+    let noteItemString = `<li class="todo-item">
+          <div class="item-main">
+            <input type="checkbox" id="task3" />
+            <label for="task3">${todoItem.title}</label>
+          </div>
+          <div class="item-meta">
+            <span class="date">${todoItem.time}</span>
+          </div>
+        </li>`;
+    notesContainer.innerHTML += noteItemString;
+    index++;
+  }
+
   return todoObj;
 };
 
@@ -31,7 +52,7 @@ let getCurrentTime = () => {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednesday",
+    "Wed",
     "Thursday",
     "Friday",
     "Saturday",
@@ -49,16 +70,15 @@ let getCurrentTime = () => {
     "June",
     "July",
     "August",
-    "September",
+    "Sep",
     "October",
     "November",
     "December",
   ];
   let monthActual = monthArray[month];
 
-  let dateAndTime = `${hour}:${minute} ${dateTime},${monthActual} ${year}`;
+  let dateAndTime = `${hour}:${minute} ${dayActual} ${dateToday},${monthActual} ${year}`;
   return dateAndTime;
 };
-
 
 form.addEventListener("submit", submitForm);
