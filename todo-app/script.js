@@ -1,5 +1,32 @@
 console.log("TODO APP");
-let todoArray = [];
+let showNotes = () => {
+  // fetch the notes from the localstorage
+  let notes = localStorage.getItem("notes") ?? [];
+  notes = JSON.parse(notes);
+  console.log(notes);
+  // show the notes
+  let notesContainer = document.querySelector(".todo-list");
+  notesContainer.innerHTML = "";
+  // loop through the todo
+  let index = 0;
+  while (index < notes.length) {
+    let todoItem = notes[index];
+    let noteItemString = `<li class="todo-item">
+          <div class="item-main">
+            <input type="checkbox" id=${"task"+index} />
+            <label for=${"task"+index}>${todoItem.title}</label>
+          </div>
+          <div class="item-meta">
+            <span class="date">${todoItem.time}</span>
+          </div>
+        </li>`;
+    notesContainer.innerHTML += noteItemString;
+
+    index++;
+  }
+};
+showNotes();
+let todoArray = JSON.parse(localStorage.getItem("notes")) ?? [];
 let form = document.querySelector(".todo-form");
 let submitForm = (e) => {
   // stop the page reload after form submission
@@ -14,32 +41,17 @@ let submitForm = (e) => {
     isCompleted: false,
     time: getCurrentTime(),
   };
-
+  // send the todoObj to the array
   todoArray.push(todoObj);
   console.log(todoArray);
+
+  // stringify and send the array to the localstore
+  let stringifiedArray = JSON.stringify(todoArray);
+  console.log(stringifiedArray);
+  localStorage.setItem("notes", stringifiedArray);
+
   formInput.value = "";
-
-  // show the notes
-  let notesContainer = document.querySelector(".todo-list");
-
-  // loop through the todo
-  let index = 0;
-  while (index < todoArray.length) {
-    let todoItem = todoArray[index];
-    let noteItemString = `<li class="todo-item">
-          <div class="item-main">
-            <input type="checkbox" id="task3" />
-            <label for="task3">${todoItem.title}</label>
-          </div>
-          <div class="item-meta">
-            <span class="date">${todoItem.time}</span>
-          </div>
-        </li>`;
-    notesContainer.innerHTML += noteItemString;
-    index++;
-  }
-
-  return todoObj;
+  showNotes();
 };
 
 let getCurrentTime = () => {
@@ -48,15 +60,7 @@ let getCurrentTime = () => {
   let minute = dateTime.getMinutes();
   let dateToday = dateTime.getDate();
   let year = dateTime.getFullYear();
-  let dayArray = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wed",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let dayArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = dateTime.getDay();
   let dayActual = dayArray[day];
 
