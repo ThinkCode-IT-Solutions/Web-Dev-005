@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Feed</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A simple custom style for a consistent aspect ratio */
+        .aspect-card-image {
+            aspect-ratio: 16 / 9;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Today's Headlines</h1>
+            <p class="mt-1 text-md text-gray-500">A curated feed of the latest news.</p>
+        </div>
+        <div class="flex justify-start ms-8 pb-12">
+            <button id="fetch-news-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200">
+                Fetch News
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="max-w-7xl mx-auto py-8 sm:px-6 lg:px-8">
+            <div id="news-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <div class="bg-white shadow-md border border-gray-200 flex flex-col justify-between">
+                    <div class="relative">
+                        <img class="w-full object-cover aspect-card-image" src="https://biztoc.com/cdn/ca4298fe3cb0c9b6_s.webp" alt="News Article Image">
+                    </div>
+
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                            <span class="font-semibold bg-gray-100 px-2 py-1 uppercase">Biztoc.com</span>
+                            <span>Sep 22, 2025</span>
+                        </div>
+
+                        <h5 class="text-gray-900 font-bold text-xl tracking-tight mb-2 flex-grow">
+                            Will Elon Musk Join Trump Administration This Year? Here's What Betting Markets Are Predicting
+                        </h5>
+
+                        <p class="font-normal text-gray-600 mb-4">
+                            Betting markets are buzzing with speculation about Tesla Inc. CEO Elon Musk potentially joining the Trump Administration...
+                        </p>
+                    </div>
+
+                    <div class="p-5 border-t border-gray-200">
+                         <a href="https://biztoc.com/x/ca4298fe3cb0c9b6" target="_blank" rel="noopener noreferrer" class="w-full block text-center text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5">
+                            Read Full Article &rarr;
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md border border-gray-200 flex flex-col justify-between">
+                    <img class="w-full object-cover aspect-card-image" src="https://via.placeholder.com/600x338/cccccc/888888?text=News+Image" alt="Placeholder Image">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                            <span class="font-semibold bg-gray-100 px-2 py-1 uppercase">Tech News</span>
+                            <span>Sep 22, 2025</span>
+                        </div>
+                        <h5 class="text-gray-900 font-bold text-xl tracking-tight mb-2 flex-grow">
+                            The Future of Quantum Computing in the Enterprise
+                        </h5>
+                        <p class="font-normal text-gray-600 mb-4">
+                           Exploring how quantum computing is poised to revolutionize industries from finance to healthcare in the coming decade.
+                        </p>
+                    </div>
+                     <div class="p-5 border-t border-gray-200">
+                         <a href="#" class="w-full block text-center text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5">
+                            Read Full Article &rarr;
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md border border-gray-200 flex flex-col justify-between">
+                    <img class="w-full object-cover aspect-card-image" src="https://via.placeholder.com/600x338/cccccc/888888?text=News+Image" alt="Placeholder Image">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                            <span class="font-semibold bg-gray-100 px-2 py-1 uppercase">Global Finance</span>
+                             <span>Sep 21, 2025</span>
+                        </div>
+                        <h5 class="text-gray-900 font-bold text-xl tracking-tight mb-2 flex-grow">
+                           Central Banks Announce New Digital Currency Initiative
+                        </h5>
+                        <p class="font-normal text-gray-600 mb-4">
+                           A joint effort aims to create a standardized framework for central bank digital currencies (CBDCs) to streamline cross-border payments.
+                        </p>
+                    </div>
+                     <div class="p-5 border-t border-gray-200">
+                         <a href="#" class="w-full block text-center text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium text-sm px-5 py-2.5">
+                            Read Full Article &rarr;
+                        </a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </main>
+
+</body>
+</html>
