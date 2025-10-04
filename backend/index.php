@@ -1,106 +1,44 @@
-<?php
 
-    echo "Hello world";
-
-    $age = 11;
-
-
-    switch ($age){
-        case 10:
-            echo "you are 10 years old";
-            break;
-        case 12: 
-            echo "you are 12 years old";
-            break;
-        case 16:
-            echo "you are 16 years old";
-            break;
-        default:
-            echo "you are neither 12,10,or 16";
-    }
+<?php 
+    $title = "Rust Learning";  
+    $successMessage = "<h1>Kam ho gya</h1>"  ;
+    $friends = ["Ali", "Muhtshim", "Zaid"];
+?>
 
 
-
-
-
-
-
-
-
-    echo "<hr>";
-
-
-    
-    // for($index = 0;$index < count($friends);$index++){
-        //     $element = $friends[$index];
-        //     echo "Hy $element <br>";
-        // }
-
-        
-        
-        // $index = 0;
-        // while($index < count($friends)){
-            
-        //     $friend = $friends[$index];
-        //     echo "Hy $friend <hr>";
-        
-        //     $index++;
-        // }
-        
-        
-            
-            
-        // $index = 0;
-        // do{
-            
-        //     $friend = $friends[$index];
-        //     echo "<li> Hy $friend </li>";
-            
-        //     $index++;
-        // }while($index < count($friends));
-        
-        
-        
-        // $friends = ["Hassan", "Ali","Shokat"];
-
-        // foreach($friends as $item){
-            
-        //     echo "hello $item <br>";
-        // }
-
-
-
-
-        function myfunc ($n1,$n2) {
-
-            $sum = $n1 + $n2;
-            return $sum;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $title;  ?></title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
         }
+        .list-item{
+            background-color: lightblue;
+            padding: 1rem;
+            border-radius: .4rem;
+            margin: .4rem;
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+    <h1><?php echo $title;  ?></h1>
+    <hr>
+    <h3>My Frinds</h3>
+    <ul>
+        <?php  
 
-        $num1 = 19;
-        $num2 = 34;
-        $result  = myfunc($num1,$num2);
-        echo $result;
+            foreach($friends as $item){
 
-
-        class Ronaldo {
-            public $age = 34;
-
-            public function myage () {
-                echo "my age is " . $this->age;
+                echo "<li class='list-item'>$item</li>";
             }
-        }
-
-
-        $vini = new Ronaldo();
-         $vini->myage();
-         echo $vini->age
-        
-
-        
-
-
-
-
-
         ?>
+        
+    </ul>
+</body>
+</html>
