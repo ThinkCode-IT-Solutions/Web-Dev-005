@@ -175,7 +175,7 @@
 
         <!-- Add Contact Form -->
         <main class="form-wrapper">
-            <form action="#" method="POST" class="contact-form">
+            <form action="backend/controllers/form_controller.php" method="POST" class="contact-form">
                 
                 <!-- Full Name -->
                 <div class="form-group">
