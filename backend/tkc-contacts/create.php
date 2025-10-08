@@ -1,3 +1,23 @@
+
+<?php
+$success = false;
+if(isset($_GET['message']) && $_GET['message'] == "success"){
+  $success = "done";
+}
+
+if(isset($_GET['message']) && $_GET['message'] == "failed"){
+  $success = "failed";
+}
+
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,6 +167,29 @@
             opacity: 0.9;
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
+        .alert-container{
+        /* background-color: green; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .alert{
+        width: 50%;
+        padding: 1rem;
+        border-radius: .5rem;
+        box-shadow: 5px 5px 15px #333333 ;
+        margin-bottom: 1rem;
+      }
+      .alert-success{
+        background-color: lightgreen;
+        border: 2px solid green;
+      }
+      .alert-error {
+        background-color: red;
+         border: 2px solid maroon;
+
+      }
 
         @media (max-width: 768px) {
             body {
@@ -172,7 +215,31 @@
                 Back
             </a>
         </header>
+<?php
+      $successAlert = '<div class="alert-container">
+        
+        <!-- alert -->
+        <div class="alert alert-success">
+          Success , your contact is added
+        </div>
+      </div>';
 
+      $failedAlert = '<div class="alert-container">
+        
+        <!-- alert -->
+        <div class="alert alert-error">
+          Sorry , your contact was not added
+        </div>
+      </div>';
+
+      if($success == "done"){
+        echo $successAlert;
+      }else if($success == "failed"){
+        echo $failedAlert;
+      }
+
+
+      ?>
         <!-- Add Contact Form -->
         <main class="form-wrapper">
             <form action="backend/controllers/form_controller.php" method="POST" class="contact-form">

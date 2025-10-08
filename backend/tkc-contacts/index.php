@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -192,6 +195,7 @@
                 Add New Contact
     </a>
         </header>
+        
 
         <!-- Dashboard Stats Cards -->
         <section class="dashboard-cards">
